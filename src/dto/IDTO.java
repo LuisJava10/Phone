@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Samuel
+ * @author jorge
  */
 public interface IDTO extends Serializable{
     
@@ -24,5 +24,11 @@ public interface IDTO extends Serializable{
     public String consultarPorID();
     
     public String consultarTodos();
+    
+    //Metodo de prueba
+    public int getComando();
+    
+    public void setComando(int a);
+    //Fin metodo prueba
     
 }

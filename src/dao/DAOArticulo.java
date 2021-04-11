@@ -5,9 +5,11 @@
  */
 package dao;
 
+import dto.DTOArticulo;
+
 /**
  *
- * @author Samuel
+ * @author jorge
  */
 public class DAOArticulo implements IDAO {
 

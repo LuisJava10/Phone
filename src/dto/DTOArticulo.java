@@ -122,5 +122,7 @@ public class DTOArticulo implements IDTO{
     public String consultarTodos() {
         return "SELECT * FROM articulo";
     }
+
+
     
 }

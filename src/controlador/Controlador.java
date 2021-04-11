@@ -7,16 +7,17 @@ package controlador;
 
 import dto.DTOArticulo;
 import dto.DTOServicioTecnico;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import modelos.ListaDoblementeEnlazadaGenerica;
 import utils.ComandosSql;
 import vista.Principal;
 
 /**
  *
- * @author Samuel
+ * @author jorge
  */
-
-    public class Controlador {
+public class Controlador {
     
     private Principal vista;
     private DTOArticulo producto;
@@ -46,7 +47,7 @@ import vista.Principal;
         DTOServicioTecnico servicio = new DTOServicioTecnico();
         servicio.setComando(ComandosSql.SERVICIO_CONSULTAR_TODOS);
         
-        return (ListaDoblementeEnlazadaGenerica) ClienteSocket.ejecutarServicio(servicio);
+        return (ListaDoblementeEnlazadaGenerica) ClienteSocket.ejecutar(servicio);
         
     }
 
@@ -60,5 +61,8 @@ import vista.Principal;
     public void crearArticulo(DTOArticulo articulo) {
         ClienteSocket.ejecutar(articulo);
     }
-    
+
+    public void crearServicio(DTOServicioTecnico servicio) {
+        ClienteSocket.ejecutar(servicio);
+    }
 }
